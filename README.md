@@ -37,3 +37,5 @@ By the default the Relay will be setup to handle 4 for the HLAPI config, 100 for
 This means that if for example you want more than 4 players on the relay and you are using the HLAPI config. 
 You HAVE to set the MaxConnections to a larger value on the game instance AND the relay. 
 They need to match up.
+## Trial licence
+The trial licence has no limitations except that only 20 concurrent connections are allowed. 
