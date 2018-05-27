@@ -14,6 +14,7 @@ The MLAPI.Relay is a relay designed for the UNET Transport to relay traffic betw
 * QueueMessageForSending
 * SendQueuedMessages
 * Receive
+* ReceiveFromHost
 
 ## Special setup
 The MLAPI.Relay REQUIRES there to be at least ONE reliable channel type. If it is plain reliable or has sequencing or fragmenting support does not matter.
