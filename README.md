@@ -4,6 +4,20 @@
 ## Introduction
 The documentation and the relay itself is currently WIP. This is subject to change.
 
+The MLAPI.Relay is a relay designed for the UNET Transport to relay traffic between peers that are hidden behind a NAT. Relaying traffic can be expensive but will allow you to communicate no matter what NAT type the host is behind. The MLAPI.Relay works just like the NetworkTransport. To use the relay simply replace the NetworkTransport with the RelayTransport where the following methods are used:
+* Connect
+* AddHost
+* AddHostWithSimulator
+* AddWebsocketHost
+* Disconnect
+* Send
+* QueueMessageForSending
+* SendQueuedMessages
+* Receive
+
+## Special setup
+The MLAPI.Relay REQUIRES there to be at least ONE reliable channel type. If it is plain reliable or has sequencing or fragmenting support does not matter.
+
 ## Configuration
 The relay has a config file called config.json. The config contains 3 parts
 
