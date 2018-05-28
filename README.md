@@ -23,6 +23,9 @@ The MLAPI.Relay is a relay designed for the UNET Transport to relay traffic betw
 * Deploy and forget Auto-update (optional). _The auto update feature allows you to deploy the relay and it will auto update whenever needed._
 * Disable home calling. _The MLAPI will only do connections to external sources for update checking purposes. This can be disabled._
 
+## Matchmaking
+Unlike Unity's relay. The MLAPI.Relay does not require you to use any specific matchmaker. The MLAPI.Relay will pass the destination address when connecting rather than a relay specific roomId. This allows you to run the MLAPI.Relay with any matchmaker or without a matchmaker all together.
+
 ## Special setup
 The MLAPI.Relay REQUIRES there to be at least ONE reliable channel type. If it is plain reliable or has sequencing or fragmenting support does not matter.
 
