@@ -4,7 +4,7 @@
 ## Introduction
 The documentation and the relay itself is currently WIP. This is subject to change.
 
-The MLAPI.Relay is a relay designed for the UNET Transport to relay traffic between peers that are hidden behind a NAT. Relaying traffic can be expensive but will allow you to communicate no matter what NAT type the host is behind. The MLAPI.Relay works just like the NetworkTransport. To use the relay simply replace the NetworkTransport with the RelayTransport where the following methods are used:
+The MLAPI.Relay is a relay designed for the UNET Transport to relay traffic between peers that are hidden behind a NAT. Relaying traffic can be expensive but will allow you to communicate no matter what NAT type the host is behind. The MLAPI.Relay works just like the NetworkTransport. Despite the naming, the MLAPI.Relay does not have to be used with the MLAPI library. It can be used with any game built on the NetworkTransport, including the HLAPI. The MLAPI.Relay includes default configurations for use with the MLAPI, HLAPI and an empty template for custom setups. To use the relay simply replace the NetworkTransport with the RelayTransport where the following methods are used:
 * Connect
 * AddHost
 * AddHostWithSimulator
@@ -52,7 +52,7 @@ Relay config contains many different fields.
 * updateChecking toggles wheter or not the relay should do web requests to check for updates. This will not by itself enable auto update.
 * autoUpdate toggles wheter or not the relay will automatically download and deploy the latest updates. This requires updateChecking to be turned on.
 * licenceKey is the licence key you got when purchasing your licence. If this is empty or invalid, a trial licence will be used
-* channels is the list of channelTypes that should be used. In the order they are added
+* channels is the list of channelTypes that should be used. In the order they are added. Note that some high level libraries have default channels that are added in addition to the user channels. Therefor the relay has templates for the MLAPI default channels and the HLAPI channels. When using these templates, the channels added are only the library channels. User channels have to be added additionaly.
 * bandwidthGracePeriodLength is the length of the bandwidth grace peridod from the point where a client connects
 * gracePeriodBandwidthLimit is the amount of bytes per second that is allowed during the bandwidth grace period for each client. If this 0 or less. No limit will be used during the grace period.
 * bandwidthLimit is the amount of bytes per second that is allowed to be used for each client outside of the grace period. If this is 0 or less, no limit will be used.
