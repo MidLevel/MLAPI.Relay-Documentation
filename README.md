@@ -6,6 +6,8 @@ The documentation and the relay itself is currently WIP. This is subject to chan
 
 The MLAPI.Relay is a relay designed for the UNET Transport to relay traffic between peers that are hidden behind a NAT. Relaying traffic can be expensive but will allow you to communicate no matter what NAT type the host is behind. The MLAPI.Relay works just like the NetworkTransport. Despite the naming, the MLAPI.Relay does not have to be used with the MLAPI library. It can be used with any game built on the NetworkTransport, including the HLAPI. The MLAPI.Relay includes default configurations for use with the MLAPI, HLAPI and an empty template for custom setups. To use the relay simply replace the NetworkTransport with the RelayTransport where the following methods are used:
 * Connect
+* ConnectEndPoint
+* ConnectWithSimulator
 * AddHost
 * AddHostWithSimulator
 * AddWebsocketHost
