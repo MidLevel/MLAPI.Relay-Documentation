@@ -22,6 +22,7 @@ The MLAPI.Relay is a relay designed for the UNET Transport to relay traffic betw
 * Update checking (optional). _This will check for updates and inform you of new updates._
 * Deploy and forget Auto-update (optional). _The auto update feature allows you to deploy the relay and it will auto update whenever needed._
 * Disable home calling. _The MLAPI will only do connections to external sources for update checking purposes. This can be disabled._
+* Non external licence checking. _Even IF, potentially our servers would go down, or we whould end operation. Your licence will continue to work._
 
 ## Matchmaking
 Unlike Unity's relay. The MLAPI.Relay does not require you to use any specific matchmaker. The MLAPI.Relay will pass the destination address when connecting rather than a relay specific roomId. This allows you to run the MLAPI.Relay with any matchmaker or without a matchmaker all together.
@@ -63,6 +64,6 @@ The MaxConnections setting is a part of the CRC check that happens during the in
 By the default the Relay will be setup to handle 4 for the HLAPI config, 100 for the MALPI config and 65534 for Empty. 
 This means that if for example you want more than 4 players on the relay and you are using the HLAPI config. 
 You HAVE to set the MaxConnections to a larger value on the game instance AND the relay. 
-They need to match up.
+They need to match up. (I think this might be a bug, it's been reported)
 ## Trial licence
-The trial licence has no limitations except that only 20 concurrent connections are allowed. 
+The trial licence has no limitations except that only 20 concurrent connections are allowed. This is to allow for endless evaluation and development.
