@@ -16,6 +16,13 @@ The MLAPI.Relay is a relay designed for the UNET Transport to relay traffic betw
 * Receive
 * ReceiveFromHost
 
+## Features
+* Written in .NET Core for Cross platform
+* Allows you to limit bandwidth (optional)
+* Update checking (optional). _This will check for updates and inform you of new updates._
+* Deploy and forget Auto-update (optional). _The auto update feature allows you to deploy the relay and it will auto update whenever needed._
+* Disable home calling. _The MLAPI will only do connections to external sources for update checking purposes. This can be disabled._
+
 ## Special setup
 The MLAPI.Relay REQUIRES there to be at least ONE reliable channel type. If it is plain reliable or has sequencing or fragmenting support does not matter.
 
@@ -38,6 +45,8 @@ Relay config contains many different fields.
 **THIS HAS TO BE THE SAME ON THE GAME INSTANCE. SEE NOTES**
 * port is the relay port
 * bufferSize is the size of the buffer that will be allocated for messages
+* updateChecking toggles wheter or not the relay should do web requests to check for updates. This will not by itself enable auto update.
+* autoUpdate toggles wheter or not the relay will automatically download and deploy the latest updates. This requires updateChecking to be turned on.
 * licenceKey is the licence key you got when purchasing your licence. If this is empty or invalid, a trial licence will be used
 * channels is the list of channelTypes that should be used. In the order they are added
 * bandwidthGracePeriodLength is the length of the bandwidth grace peridod from the point where a client connects
