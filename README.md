@@ -2,7 +2,7 @@
 ![](https://i.imgur.com/dJdKQYn.png)
 
 ## Introduction
-The documentation and the relay itself is currently WIP. This is subject to change.
+_The documentation and the relay itself is currently WIP. This is subject to change._
 
 The MLAPI.Relay is a relay designed for the UNET Transport to relay traffic between peers that are hidden behind a NAT. Relaying traffic can be expensive but will allow you to communicate no matter what NAT type the host is behind. The MLAPI.Relay works just like the NetworkTransport. Despite the naming, the MLAPI.Relay does not have to be used with the MLAPI library. It can be used with any game built on the NetworkTransport, including the HLAPI. The MLAPI.Relay includes default configurations for use with the MLAPI, HLAPI and an empty template for custom setups. To use the relay simply replace the NetworkTransport with the RelayTransport where the following methods are used:
 * Connect
@@ -48,7 +48,6 @@ This is the NetworkTransport GlobalConfig. This instructs the NetworkTransport h
 Relay config contains many different fields.
 
 * maxConnections is the maximum amount of connections the relay can support. 
-**THIS HAS TO BE THE SAME ON THE GAME INSTANCE. SEE NOTES**
 * port is the relay port
 * bufferSize is the size of the buffer that will be allocated for messages
 * updateChecking toggles wheter or not the relay should do web requests to check for updates. This will not by itself enable auto update.
@@ -59,13 +58,5 @@ Relay config contains many different fields.
 * gracePeriodBandwidthLimit is the amount of bytes per second that is allowed during the bandwidth grace period for each client. If this 0 or less. No limit will be used during the grace period.
 * bandwidthLimit is the amount of bytes per second that is allowed to be used for each client outside of the grace period. If this is 0 or less, no limit will be used.
 
-## Important notes
-#### MaxConnections
-The relay uses the UNET Transport under the hood. 
-The MaxConnections setting is a part of the CRC check that happens during the initial handshake.
-By the default the Relay will be setup to handle 4 for the HLAPI config, 100 for the MALPI config and 65534 for Empty. 
-This means that if for example you want more than 4 players on the relay and you are using the HLAPI config. 
-You HAVE to set the MaxConnections to a larger value on the game instance AND the relay. 
-They need to match up. (I think this might be a bug, it's been reported)
 ## Trial licence
 The trial licence has no limitations except that only 20 concurrent connections are allowed. This is to allow for endless evaluation and development.
