@@ -22,7 +22,7 @@ The MLAPI.Relay is a relay designed for the UNET Transport to relay traffic betw
 * Written in .NET Core for Cross platform
 * Allows you to limit bandwidth (optional)
 * Update checking (optional). _This will check for updates and inform you of new updates._
-* Deploy-and-forget Auto-update (optional). _The auto update feature allows you to deploy the relay and it will auto update whenever needed._
+* Deploy-and-forget Auto-update (optional). _The auto update feature allows you to deploy the relay and it will auto update whenever needed._ *(NOT YET IMPLEMENTED)*
 * Disable home calling. _The MLAPI will only do connections to external sources for update checking purposes. This can be disabled._
 * Non external license checking. _Even if, our servers were to go down (or in the unlikely event that we would shut down this service), your license would continue to work._
 
