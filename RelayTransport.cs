@@ -70,7 +70,8 @@ namespace MLAPI.Relay
             isClient = !createServer;
             SetChannelsFromTopology(topology);
             int ret = NetworkTransport.AddHost(topology);
-            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out byte b);
+            byte error;
+            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out error);
             return ret;
         }
         public static int AddHost(HostTopology topology, int port, bool createServer)
@@ -80,7 +81,8 @@ namespace MLAPI.Relay
             isClient = !createServer;
             SetChannelsFromTopology(topology);
             int ret = NetworkTransport.AddHost(topology, port);
-            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out byte b);
+            byte error;
+            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out error);
             return ret;
         }
         public static int AddHost(HostTopology topology, int port, string ip, bool createServer)
@@ -90,7 +92,8 @@ namespace MLAPI.Relay
             isClient = !createServer;
             SetChannelsFromTopology(topology);
             int ret = NetworkTransport.AddHost(topology, port, ip);
-            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out byte b);
+            byte error;
+            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out error);
             return ret;
         }
 
@@ -101,7 +104,8 @@ namespace MLAPI.Relay
             isClient = !createServer;
             SetChannelsFromTopology(topology);
             int ret = NetworkTransport.AddHostWithSimulator(topology, minTimeout, maxTimeout, port, ip);
-            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out byte b);
+            byte error;
+            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out error);
             return ret;
         }
 
@@ -112,7 +116,8 @@ namespace MLAPI.Relay
             isClient = !createServer;
             SetChannelsFromTopology(topology);
             int ret = NetworkTransport.AddHostWithSimulator(topology, minTimeout, maxTimeout);
-            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out byte b);
+            byte error;
+            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out error);
             return ret;
         }
 
@@ -123,7 +128,8 @@ namespace MLAPI.Relay
             isClient = !createServer;
             SetChannelsFromTopology(topology);
             int ret = NetworkTransport.AddHostWithSimulator(topology, minTimeout, maxTimeout, port);
-            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out byte b);
+            byte error;
+            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out error);
             return ret;
         }
 
@@ -134,7 +140,8 @@ namespace MLAPI.Relay
             isClient = !createServer;
             SetChannelsFromTopology(topology);
             int ret = NetworkTransport.AddWebsocketHost(topology, port);
-            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out byte b);
+            byte error;
+            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out error);
             return ret;
         }
 
@@ -145,7 +152,8 @@ namespace MLAPI.Relay
             isClient = !createServer;
             SetChannelsFromTopology(topology);
             int ret = NetworkTransport.AddWebsocketHost(topology, port, ip);
-            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out byte b);
+            byte error;
+            if (createServer) relayConnectionId = NetworkTransport.Connect(ret, RelayAddress, RelayPort, 0, out error);
             return ret;
         }
 
