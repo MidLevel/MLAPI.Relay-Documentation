@@ -160,7 +160,7 @@ namespace MLAPI.Relay
         private static byte[] disconnectBuffer = new byte[] { 0, 0, (byte)MessageType.ClientDisconnect };
         public static bool Disconnect(int hostId, int connectionId, out byte error)
         {
-            if (!Enabled) NetworkTransport.Disconnect(hostId, connectionId, out error);
+            if (!Enabled) return NetworkTransport.Disconnect(hostId, connectionId, out error);
 
             if (!isClient)
             {
