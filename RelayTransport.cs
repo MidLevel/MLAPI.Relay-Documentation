@@ -310,7 +310,6 @@ namespace MLAPI.Relay
                     case QosType.ReliableFragmented:
                     case QosType.ReliableFragmentedSequenced:
                     case QosType.ReliableSequenced:
-                    case QosType.ReliableStateUpdate:
                         return i;
                 }
             }
